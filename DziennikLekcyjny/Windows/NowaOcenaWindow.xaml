@@ -1,0 +1,28 @@
+﻿<Window x:Class="DziennikLekcyjny.Windows.NowaOcenaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Wstaw ocenę" Height="250" Width="300"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock Text="Wartość oceny:"/>
+            <TextBox VerticalContentAlignment="Center" x:Name="OcenaTextBox" Height="25" Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0,0,0,10">
+            <TextBlock Text="Waga oceny:"/>
+            <TextBox VerticalContentAlignment="Center" x:Name="WagaTextBox" Height="25" Margin="0,4,0,0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Zatwierdź" Width="80" Margin="0,0,10,0" Click="Zatwierdz_Click"/>
+            <Button Content="Anuluj" Width="80" Click="Anuluj_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

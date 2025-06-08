@@ -1,0 +1,33 @@
+﻿<Window x:Class="DziennikLekcyjny.Windows.LogowanieWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterScreen"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Logowanie" Height="300" Width="400" ResizeMode="NoResize">
+    <Grid Background="#f9f9f9" Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Logowanie" FontSize="22" FontWeight="Bold" 
+                   HorizontalAlignment="Center" Margin="0,10,0,20"/>
+
+        <StackPanel Grid.Row="1" Margin="40,0" Orientation="Vertical">
+            <TextBlock Text="Login:" Margin="0,0,0,4" />
+            <TextBox VerticalContentAlignment="Center" Text="{Binding Login,Mode=TwoWay}" Height="28" Margin="0,0,0,10" />
+
+            <TextBlock Text="Hasło:" Margin="0,0,0,4" />
+            <PasswordBox VerticalContentAlignment="Center" x:Name="PasswordBox" PasswordChanged="PasswordBox_PasswordChanged" Height="28" />
+
+        </StackPanel>
+
+        <Button Content="Zaloguj" Width="100" Height="30" Click="Zaloguj"
+                Grid.Row="3" HorizontalAlignment="Center" Margin="0,20,0,0"
+                Background="#3b82f6" Cursor="Hand" Foreground="White" FontWeight="SemiBold" />
+    </Grid>
+</Window>
